@@ -1,11 +1,15 @@
 public class Mesa {
 
-    int numeroMesa;
-    int capacidadMesa;
+    private int numero;
+    private int capacidadMesa;
 
-    public Mesa(int numeroMesa, int capacidadMesa) {
-        this.numeroMesa = numeroMesa;
+    public Mesa(int numero, int capacidadMesa) {
+        this.numero = numero;
         this.capacidadMesa = capacidadMesa;
     }
+
+    public int getNumero() {return this.numero;}
+
+    
 
 }

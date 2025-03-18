@@ -6,6 +6,7 @@ public class Restaurante {
 
     //Atributos Restaurante
     LinkedList<Mesa> mesas = new LinkedList<>();
+    LinkedList<Plato> platos = new LinkedList<>();
 
 
     public void registrarMesa(){
@@ -57,7 +58,7 @@ public class Restaurante {
         } while(precioPlato <= 0);
 
         Plato plato = new Plato(codigoPlato, nombrePlato, precioPlato);
-        plato.add(plato);
+        platos.add(plato);
 
         System.out.println("Mesa creada correctamente");
 

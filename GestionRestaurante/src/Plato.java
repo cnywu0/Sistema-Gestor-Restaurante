@@ -10,6 +10,7 @@ public class Plato {
         this.precioPlato = precioPlato;
     }
 
+    public String getCodigo() {return this.codigoPlato;}
     public double getPrecio() {return this.precioPlato;}
 
 }

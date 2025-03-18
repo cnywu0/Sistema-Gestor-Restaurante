@@ -18,6 +18,7 @@ public class Pedido {
     }
 
     public int getNumeroMesa() {return mesaAsociada.getNumero();}
+    
     public void cambiarCompletado() {this.estaCompletado = !this.estaCompletado;}
 
     private double calcularPrecioTotal() {

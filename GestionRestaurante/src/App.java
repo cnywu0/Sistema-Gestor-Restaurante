@@ -9,7 +9,7 @@ public class App {
         Restaurante restaurante = new Restaurante();
 
         do {
-            System.out.println("\nBienvenido al Sistema de Restaurante 🍕🍔");
+            System.out.println("\nBienvenido al Sistema de Restaurante");
             System.out.println("1. Registrar mesa");
             System.out.println("2. Registrar Plato");
             System.out.println("3. Reservar Pedido");
@@ -27,12 +27,8 @@ public class App {
             switch (opcion) {
                 case 1 -> restaurante.registrarMesa();
                 case 2 ->  restaurante.registrarPlato();
-                case 3 ->   //reservarPedido();
-                case 4 ->   //modificarPedido();
-                case 5 ->   //borrarPeiddo();
-                case 6 ->   //modificarPlato();
-                case 7 ->   //guardarDatos();
-                case 8 ->   //cargarDatos();
+                case 9 -> System.out.println("Has salido de GestionRestaurante");
+                
             }
             
         } while (opcion != 9);

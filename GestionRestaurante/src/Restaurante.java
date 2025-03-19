@@ -70,6 +70,8 @@ public class Restaurante {
 
     public void registrarPedido() {
 
+
+
         Mesa mesaEncontrada = null;
         int numeroMesa;
         
@@ -120,6 +122,57 @@ public class Restaurante {
         System.out.println("Pedido añadido correctamente");
     }
 
+
+    private Pedido getPedidoNumeroMesa() {
+        if (!pedidos.isEmpty()) {
+            
+            do {
+
+                System.out.println("Introduce un numero de mesa asociado al pedido: ");
+                int numero = sc.nextInt();
+        
+                for (Pedido pedido : this.pedidos) {
+                    if (numero == pedido.getNumeroMesa()) {
+                        control = false;
+                        return pedido;
+                    }
+                }
+                System.out.println("Introduce un numero valido");
+
+            }while(true);
+        }
+        return null;
+    }
+
+    public void menuModificarPedido() {
+        Pedido pedido = this.getPedidoNumeroMesa();
+        int opcion;
+
+        do { 
+            
+            System.out.println("Que quieres hacer?:");
+            System.out.println("1. Cambiar estado (Completado/No Completado)");
+            System.out.println("2. Añadir Plato.");
+            System.out.println("3. Borrar Plato.");
+            System.out.println("4. Cambiar Mesa.");
+            System.out.println("5. Aplicar Descuento");
+            System.out.println("6. Borrar Pedido");
+            System.out.println("7. Salir");
+            System.out.println("Opcion: ");
+            opcion = sc.nextInt();
+
+        } while (opcion != 7);
+
+        switch (opcion) {
+            case 1 -> pedido.cambiarCompletado();
+            case 2 -> pedido.addPlato();
+            case 3 -> pedido.removePlato();
+        }
+    }
+
+    public void modificarPedido() {
+
+    }
 
 
 }

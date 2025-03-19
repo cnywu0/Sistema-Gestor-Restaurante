@@ -21,6 +21,19 @@ public class Pedido {
     
     public void cambiarCompletado() {this.estaCompletado = !this.estaCompletado;}
 
+    public void addPlato(Plato plato) {this.listaPlatos.add(plato);}
+    public void removePlato(String codigoPlato) {
+        
+        Plato platoIterado;
+        for (int i = 0; i < this.listaPlatos.size(); i++) {
+            platoIterado = this.listaPlatos.get(i);
+            if (platoIterado.getCodigo().equals(codigoPlato)) {
+                listaPlatos.remove(i) ;
+            }
+        }
+    }
+
+
     private double calcularPrecioTotal() {
         double precioTotal = 0;
 
